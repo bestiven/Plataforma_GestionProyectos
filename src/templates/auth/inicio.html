@@ -1,0 +1,28 @@
+
+{% extends 'base.html' %}
+
+{%block titulo%}INICIO{%endblock%}
+{% block inicio%}
+
+    <form action="/inicio">
+    <header>
+        <a href="{{url_for ('registro')}}" class="botonregistro" >Registrarse</a>
+        <a href="{{url_for ('login')}}" class="botonsesion" >Inicio Sesion</a>
+        <!-- <a href="inicio.html" class="botoninicio">Inicio</a> -->
+    </header>
+
+    </form>
+    <img class="imagen" src="./static/img/imagen1.jpeg" alt="brazo robotico" />
+
+    <div class="titulo">
+        <h1>Gestion centralizada de proyectos</h1>
+
+    </div>
+    <div class="descripcion">
+        <p>Centralizada en la gestion de los proyectos, esta plataforma permite la entrega de proyectos, 
+            la comunicacion entre equipos y el seguimiento de ellos mismos.
+        </p>
+
+    </div>
+
+    {% endblock%}

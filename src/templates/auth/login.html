@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{%block login%} 
+    <header>
+        <ul>
+            <li><a href="inicio.html" class="botoninicio">Inicio</a></li>
+        </ul>
+    </header>
+
+    <div class="cuadro">
+    </div>
+
+    <div class="formulario">
+    <h2>Inicia sesion en tu cuenta</h2>
+    <form action="/login" method="post">
+        <div class="username">
+            <input type="text" name="usuario" required>
+            <label>Nombre de usuario</label>
+        </div>
+        <div class="contrasena">
+            <input type="password" name="contrasena" required>
+            <label>Contraseña</label>
+        </div>
+
+        <a type="submit" href="">Iniciar</a>
+
+        <div class="recordar">¿Olvido su contraseña?
+        </div>
+        
+        <div class="registrarse">
+            ¿No tienes una cuenta? <a href="registro.html">registro </a>
+        </div>
+    </form>
+    </div>
+
+    <img  class="imagen" src="static/img/imagen1.jpeg" alt="brazo robotico" />
+
+    <div class="descripcion">
+        <p>Inicie sesion en su cuenta para obtener una experiencia de usuario completa
+        </p>
+    </div>
+{%endblock%}
+ 

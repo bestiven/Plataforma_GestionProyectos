@@ -1,0 +1,54 @@
+
+{% extends 'base.html' %}
+
+{%block registro%} 
+        <header>
+            <ul>
+                <li><a href="inicio.html" class="botoninicio">Inicio</a></li>
+            </ul>
+        </header>
+
+    <div class="cuadro">
+    </div>
+
+    <div class="formulario">
+        <h2>Registrarse</h2>
+        <form action="/guardar_registro" method="post">
+            <div class="username">
+                <input type="text" name="usuario" required>
+                <label>Nombre:</label>
+            </div>
+            <div class="correo">
+                <input type="text" name="correo" required>
+                <label>Correo:</label>
+            </div>
+            <div class="contrasena">
+                <input type="password" name="contrasena" required>
+                <label>Contraseña</label>
+            </div>
+            <div class="conf-contrasena">
+                <input type="password" name="conf-contrasena" required>
+                <label>Confirmacion Contraseña:</label>
+            </div>
+            <div class="telefono">
+                <input type="text" name="telefono" required>
+                <label>Telefono:</label>
+            </div>
+
+            <a type="submit" href="modu.html">Registrarse</a>
+            
+            <div class="registrarse">
+                ¿ya tienes una cuenta? <a href="index.html">iniciar sesion </a>
+            </div>
+        </form>
+    </div>
+
+    <img  class="imagen" src="./static/img/imagen1.jpeg" alt="brazo robotico" />
+
+
+        <div class="descripcion">
+            <p>Inicia una cuenta para obtener una experiencia de usuario completa
+            </p>
+        </div>
+{%endblock%}
+   
