@@ -366,7 +366,7 @@ input[type="submit"]:hover {
     font-size: 27px;
     border-radius: 20px;
 }
-.imagen {
+.imagen1 {
     position: absolute; 
         top: 140px; /* Distancia desde la parte superior */
         left: 100px; /* Distancia desde la izquierda */

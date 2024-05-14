@@ -27,7 +27,7 @@ def agregarPersona():
     if nombre and correo and contraseña and confiContraseña and telefono: 
         persona1 = Persona(nombre,correo,contraseña,confiContraseña,telefono)
         personas.insert_one(persona1.formato_doc())
-        return redirect(url_for('registro'))
+        return redirect(url_for('login'))
     
     else:
         return "Error "
