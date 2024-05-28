@@ -1,153 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
-    <title>Proyectos</title>
-   <link rel="stylesheet" href="style.css">
-</head>
-<style>
-    body {
-        margin: 0px;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: rgb(5, 24, 34);
-        height: 95vh;
-    }
-    header {
-        background-color: rgb(16, 101, 107); 
-        padding: 20px; 
-        text-align: right; 
-    }
-    .costado {
-        background-color: rgb(5, 24, 34);
-        width: 300px; 
-        height: 570px;
-        text-align: center; 
-        justify-content: center;
-    }
-    .botoninicio {
-        background-color: #101110; 
-        color: white; 
-        padding: 10px 20px; 
-        border-radius: 15px; 
-        text-align: center; 
-        display: inline-block; 
-        font-size: 16px; 
-        width: 130px;
-        cursor: pointer; 
-    }
-    .botoninicio:hover {
-        background-color: #506651; 
-    }
-    .botonperfil {
-        background-color: #101110; 
-        color: white; 
-        padding: 10px 20px; 
-        border-radius: 15px; 
-        text-align: center; 
-        display: inline-block; 
-        font-size: 16px; 
-        width: 140px;
-        cursor: pointer; 
-    }
-    .botonperfil:hover {
-        background-color: #506651; 
-    }
-    .botperfil {
-        background-color: #101110; 
-        color: white; 
-        padding: 10px 60px; 
-        border-radius: 15px; 
-        text-align: center; 
-        font-size: 16px;
-        position: fixed;
-        top: 100px;
-        left: 5%;
-        cursor: pointer; 
-    }
-    .botperfil:hover {
-        background-color: #506651; 
-    }
-    .botAcerca {
-        background-color: #101110; 
-        color: white; 
-        padding: 10px 65px; 
-        border-radius: 15px; 
-        text-align: center; 
-        font-size: 16px; 
-        position: fixed;
-        top: 160px;
-        left: 5%;  
-        cursor: pointer; 
-    }
-    .botAcerca:hover {
-        background-color: #506651; 
-    }
-    .botmostrar {
-        background-color: #101110; 
-        color: white; 
-        padding: 10px 50px; 
-        border-radius: 15px; 
-        text-align: center; 
-        font-size: 16px; 
-        position: fixed;
-        top: 220px;
-        left: 5%;  
-        cursor: pointer; 
-    }
-    .botmostrar:hover {
-        background-color: #506651; 
-    }
-    .botproyectos {
-        background-color: #101110; 
-        color: white; 
-        padding: 10px 40px; 
-        border-radius: 15px; 
-        text-align: center; 
-        font-size: 16px; 
-        position: fixed;
-        top: 280px;
-        left: 5%;  
-        cursor: pointer; 
-    }
-    .botproyectosr:hover {
-        background-color: #506651; 
-    }
+{% extends 'base.html' %}
+{%block proyectos%} 
 
-    .fondo {
-        position: absolute;
-        width: 1150px;
-        height: 470px;
-        top: 170px;
-        left: 70px;
-    }
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        text-decoration: none;
-        list-style: none;
-    }
-    .cuadro{
-        width: 1065px; /* Ancho del cuadro */
-        height: 570px; /* Alto del cuadro */
-        background-color: #f0f0f0; /* Color de fondo del cuadro */
-        border-radius: 0px; /* Bordes redondeados */
-        position: absolute;
-        top: 12%; /* Distancia desde la parte superior */
-        left: 22%; /* Distancia desde la izquierda */
-    }
-</style>
 <body>
-    <form action="/proyectos">
     <header>
         
-        <a href="index.html" class="botonperfil">Perfil</a>
-        <a href="inicio.html" class="botoninicio">Inicio</a>
+        <a href="" class="botonperfil">Perfil</a>
+        <a href="inicio" class="botoninicio">Inicio</a>
     </header>
-
     <header class="costado">
         <nav>
             <ul>
@@ -159,16 +18,29 @@
         </nav>
     </header>
     <div class="cuadro">
+        <div class="cargar_doc">
         <h2>Subir Documento</h2>
-        <form action="/upload" method="POST" enctype="multipart/form-data">
-            <input type="file" name="documento" accept=".pdf, .doc, .docx">
+        <form action="/proyectos" method="POST" enctype="multipart/form-data">
+            <input type="file" id="documento" name="documento" accept=".txt,.pdf,.doc,.docx">
             <button type="submit">Cargar Documento</button>
-    </div>
+                <hr>
+        </div> 
+              
+    <h2>Documentos cargados</h2>
+    <ul class="doc_cargados">
+        {% for file in files %}
+            <li>{{ file }}
+                <a href="{{ url_for('uploaded_file', filename=file) }}" target="_blank">
+                    <button>ABRIR</button>
+                </a>
+            </li>
+        {% endfor %}
+
+    </ul>
+    <iframe srcdoc="" frameborder="0"></iframe>
+</div> 
 
     </form>
-   
-   
-    
 </body>
 
-</html>
+{%endblock%}
