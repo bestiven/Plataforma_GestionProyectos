@@ -30,14 +30,18 @@
     <ul class="doc_cargados">
         {% for file in files %}
             <li>{{ file }}
-                <a href="{{ url_for('uploaded_file', filename=file) }}" target="_blank">
-                    <button>ABRIR</button>
-                </a>
+                <!-- <iframe src="{{ url_for('uploaded_file', filename=file) }}" frameborder="0"></iframe> -->
+                <iframe
+                src=""
+                frameborder="0"
+                style="width: 100%; height: 50px;"></iframe>
+            <a
+                href="{{ url_for('static', filename='uploads/' ~ file) }}">Abrir</a>
+
             </li>
         {% endfor %}
 
     </ul>
-    <iframe srcdoc="" frameborder="0"></iframe>
 </div> 
 
     </form>
