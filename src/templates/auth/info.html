@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Centralizada de Proyectos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(16, 101, 107);
+        }
+        header {
+            background-color: rgb(5, 24, 34);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 800px;
+            color: #f2f3f2; 
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gestion Centralizada de Proyectos</h1>
+    </header>
+    <nav>
+        <a href="#quienes-somos">Quiénes Somos</a>
+        <a href="#vision">Visión</a>
+        <a href="#mision">Misión</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#proposito">Propósito</a>
+        <a href="#contactenos">Contáctenos</a>
+        <a href="proyectos">Proyectos</a>
+    </nav>
+    <form action="/info" method="POST" enctype="multipart/form-data">
+    <section id="quienes-somos">
+        <h2>Quiénes Somos</h2>
+        <p>Somos una organización dedicada a la gestión y desarrollo de proyectos innovadores. Nuestro equipo está compuesto por profesionales con amplia experiencia en diversas áreas, comprometidos con la excelencia y la creación de valor para nuestros clientes.</p>
+    </section>
+    <section id="vision">
+        <h2>Visión</h2>
+        <p>Nuestra visión es ser líderes en el desarrollo de proyectos sostenibles que contribuyan al bienestar social y al progreso tecnológico, inspirando a otras organizaciones a seguir nuestros pasos.</p>
+    </section>
+    <section id="mision">
+        <h2>Misión</h2>
+        <p>Nuestra misión es proporcionar soluciones innovadoras y eficientes a través de la gestión de proyectos de alta calidad, cumpliendo con los estándares internacionales y las expectativas de nuestros clientes.</p>
+    </section>
+    <section id="objetivos">
+        <h2>Objetivos</h2>
+        <ul>
+            <li>Desarrollar proyectos que generen un impacto positivo en la sociedad.</li>
+            <li>Promover la innovación y la sostenibilidad en todos nuestros proyectos.</li>
+            <li>Fomentar el crecimiento profesional y personal de nuestro equipo.</li>
+            <li>Establecer relaciones de largo plazo con nuestros clientes y colaboradores.</li>
+        </ul>
+    </section>
+    <section id="proposito">
+        <h2>Propósito</h2>
+        <p>Nuestro propósito es transformar ideas en realidades que mejoren la calidad de vida de las personas y contribuyan al desarrollo sostenible del entorno en el que operamos.</p>
+    </section>
+    <section id="contactenos">
+        <h2>Contáctenos</h2>
+        <p>Para más información o para ponerse en contacto con nosotros, puede enviarnos un correo electrónico a <a href="mailto:info@centraldeproyectos.com">info@centraldeproyectos.com</a> o llamarnos al teléfono (123) 456-7890.</p>
+        <p>También puede visitarnos en nuestra oficina ubicada en Calle Principal #123.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Gestion Centralizada de Proyectos. Todos los derechos reservados.</p>
+    </footer>
+</form>
+</body>
+</html>

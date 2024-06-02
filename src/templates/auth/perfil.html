@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Perfil</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(5, 24, 34);
+            height: 144vh;
+            position: absolute;
+            top: 47px;
+            left: 80px;
+            padding: 9px;
+    
+            width: 1233px;
+        }
+        .formulario {
+            position: absolute;
+            top: 50%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            background: white;
+            border-radius: 10px;
+        }
+        
+        h1 {
+            text-align: center;
+            padding: 0 0 20px 0;
+            border-bottom: 1px solid silver;
+            color: silver;
+            height: auto;
+
+        }
+        
+        p{
+            color: silver;
+        }
+        h2{
+            color: silver;
+        }
+        label{
+            color: silver;;
+        }
+        .modulo1{
+            position: absolute;
+            top: 232px;
+            left: 105px;
+            padding: 12px;
+            border: 2px solid black;
+        }
+        .modulo2{
+            position: absolute;
+            top: 232px;
+            left: 473px;
+            padding: 12px;
+            border: 2px solid rgb(198, 214, 53);
+        }
+
+        h2{
+            position: absolute;
+            top: 575px;
+            left: 33px;
+            padding: 18px;
+        }
+    
+
+        img{
+            height: 150px;
+            padding: 32px;
+        }
+        .cuadro{
+            position: absolute;
+            top: 671px;
+            left: 40px;
+            padding: 12px;
+            width: 1145px;
+            border: 2px solid black;
+        }
+        .admin{
+            position: absolute;
+            top: 134px;
+            left: -40px;
+            padding: 11px 14px;
+            margin: 10px 100px;
+            background: rgb(170, 91, 17);
+            border-radius: 10px;
+            font-size: 23px;
+            color: rgb(241, 248, 248);
+            text-decoration: none;
+            height: 38px;
+            width: 813px;
+        }
+        
+        #nombrecaja{
+            position: absolute;
+            left: 130px;
+        }
+        .telefono{
+            position: absolute;
+            left: 435px;
+            top: 10px;
+        }
+        #nombre2{
+            height: 48px;
+        }
+        .modulo3{
+            position: absolute;
+            top: 233px;
+            left: 870px;
+            padding: 12px;
+            width: 236px;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+
+   <br>
+   <form action="/perfil" method="POST">
+    <h1>Perfiles autorizados para la gestion de proyectos</h1>
+    <p class="admin">Administrar perfil</p>
+    <div class="modulo1">
+        <img src="static/img/Foto1.jpg" alt="usuario1">
+        <p>Brayan Baquero</p>
+        <p>Estudiante ingeniera</p>
+    </div>
+    <div  class="modulo2">
+        <img src="static/img/brayan.jpg" alt="usuario2">
+        <p>Brayan Cristancho</p>
+        <p>Estudiante ingeniera</p>
+    </div>
+
+    <div  class="modulo3">
+        <img src="static//img/perfil.jpeg" alt="usuario3">
+        <p>Agregar Usuario</p>
+        <p>Carrera </p>
+    </div>
+    
+    <h2>Ingreso de nuevo perfil</h2>
+    <div class="cuadro">
+        <p class="nombre"> 
+            <label for="">Nombre</label>
+            <input type="text" id="nombrecaja">
+        </p>
+        <p>
+            <label for="">Area de Manejo</label>
+            <input type="text" id="nombre">
+        </p>
+        <br>
+        <div class="telefono">
+            <p>
+                <label for="">telefono</label>
+                <input type="text" id="nombre">
+            </p>
+            <p>
+                <label for="">Mensaje</label>
+                <input type="text" size="20" id="nombre2">
+            </p>
+        </div>
+        
+    </div>
+</form>
+    
+    
+</body>
+</html>

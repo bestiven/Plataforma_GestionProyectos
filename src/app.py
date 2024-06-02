@@ -75,6 +75,13 @@ def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 
+@app.route('/perfil', methods=['GET']) 
+def perfil ():
+    return render_template('/auth/perfil.html') 
+
+@app.route('/info', methods=['GET']) 
+def info ():
+    return render_template('/auth/info.html')
 
 
 if __name__=='__main__':
